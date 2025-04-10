@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>หน้าแรก - จองที่จอดรถ/กางเต็นท์</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const user = localStorage.getItem('username');
+    if (user) {
+      // แสดงข้อความต้อนรับ
+      const welcome = document.createElement('p');
+      welcome.textContent = `ยินดีต้อนรับ ${user}`;
+      document.querySelector('header').appendChild(welcome);
+  
+      // ซ่อนปุ่ม Login และโชว์ปุ่ม Logout
+      document.getElementById('loginBtn').style.display = 'none';
+      document.getElementById('logoutBtn').style.display = 'inline-block';
+    }
+  });
+  
+    function logout() {
+      localStorage.removeItem('username');
+      alert('ออกจากระบบเรียบร้อยแล้ว');
+      window.location.href = 'login.html'; // หรือจะใช้ location.reload();
+    }
+  </script>
+  
+  
+</head>
+<body style="background: linear-gradient(to right, #d4efdf, #fff);">
+
+<header>
+  <h1 style="text-align: center;">ยินดีต้อนรับสู่ระบบจองที่จอดรถและจุดกางเต็นท์</h1>
+  <a href="login.html" class="btn-login" id="loginBtn">Login</a> 
+  <a href="#" class="btn-logout" id="logoutBtn" style="display: none;" onclick="logout()">Logout</a>
+</header>
+  
+<main class="home">
+  <div class="card">
+    <h2>จองที่จอดรถ</h2>
+    <p>เลือกจุดจอดรถของคุณได้เลย</p>
+    <a href="parking.html" class="btn">ไปยังที่จอดรถ</a>
+  </div>
+
+  <div class="card">
+    <h2>จองจุดกางเต็นท์</h2>
+    <p>เลือกจุดกางเต็นท์สำหรับพักผ่อนของคุณ</p>
+    <a href="camping.html" class="btn">ไปยังจุดกางเต็นท์</a>
+  </div>
+</main>
+
+
+</body>
+</html>

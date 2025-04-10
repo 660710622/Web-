@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>จองที่จอดรถ</title>
+  <link rel="stylesheet" href="Style.css">
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const user = localStorage.getItem('username');
+  
+      if (!user) {
+        alert('กรุณาเข้าสู่ระบบก่อนเข้าหน้านี้');
+        window.location.href = 'login.html';
+      return;
+      }
+    });
+  </script>
+  
+</head>
+<body style="background: linear-gradient(to right, #d4efdf, #fff);">
+
+<header>
+  <h1 style="text-align: center;">เลือกที่จอดรถ 🚗</h1>
+  <nav>
+    <a href="index.html" class="back-btn">← กลับหน้าแรก</a>
+    <a href="camping.html" class="switch-btn">ไปจองจุดกางเต็นท์ 🏕️</a>
+  </nav>
+</header>
+
+<div class="map-container parking">
+  <button class="spot" style="top: 16%; left: 27.2%;">P1</button>
+  <button class="spot" style="top: 16%; left: 34.2%;">P2</button>
+  <button class="spot" style="top: 16%; left: 41.2%;">P3</button>
+  <button class="spot" style="top: 16%; left: 48.2%;">P4</button>
+  <button class="spot" style="top: 16%; left: 55.2%;">P5</button>
+  <button class="spot" style="top: 16%; left: 62.4%;">P6</button>
+  <button class="spot" style="top: 16%; left: 68.5%;">P7</button>
+  <button class="spot" style="top: 57%; left: 28.7%;">P8</button>
+  <button class="spot" style="top: 57%; left: 36.7%;">P9</button>
+  <button class="spot" style="top: 57%; left: 43.7%;">P10</button>
+  <button class="spot" style="top: 57%; left: 50.7%;">P11</button>
+  <button class="spot" style="top: 57%; left: 57.7%;">P12</button>
+  <button class="spot" style="top: 57%; left: 64.9%;">P13</button>
+  <button class="spot" style="top: 57%; left: 71%;">P14</button>
+  <button class="spot" style="top: 79%; left: 27.2%;">P15</button>
+  <button class="spot" style="top: 79%; left: 34.2%;">P16</button>
+  <button class="spot" style="top: 79%; left: 41.2%;">P17</button>
+  <button class="spot" style="top: 79%; left: 48.2%;">P18</button>
+  <button class="spot" style="top: 79%; left: 55.2%;">P19</button>
+  <button class="spot" style="top: 79%; left: 62.4%;">P20</button>
+  <button class="spot" style="top: 79%; left: 68.5%;">P21</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>จองจุดกางเต็นท์</title>
+  <link rel="stylesheet" href="Style.css">
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const user = localStorage.getItem('username');
+  
+    if (!user) {
+      alert('กรุณาเข้าสู่ระบบก่อนเข้าหน้านี้');
+      window.location.href = 'login.html';
+      return;
+    }
+    });
+  </script>
+  
+</head>
+<body style="background: linear-gradient(to right, #d4efdf, #fff);">
+
+<header>
+  <h1 style="text-align: center;">เลือกจุดกางเต็นท์ 🏕️</h1>
+  <nav>
+    <a href="index.html" class="back-btn">← กลับหน้าแรก</a>
+    <a href="parking.html" class="switch-btn">ไปจองที่จอดรถ 🚗</a>
+  </nav>
+</header>
+
+<div class="map-container camping">
+  <button class="spot" style="top: 21%; left: 17.5%;">C1</button>
+  <button class="spot" style="top: 21%; left: 47.5%;">C2</button>
+  <button class="spot" style="top: 21%; left: 77.8%;">C3</button>
+  <button class="spot" style="top: 39%; left: 17.5%;">C4</button>
+  <button class="spot" style="top: 39%; left: 47.5%;">C5</button>
+  <button class="spot" style="top: 39%; left: 77.8%;">C6</button>
+  <button class="spot" style="top: 61%; left: 17.5%;">C7</button>
+  <button class="spot" style="top: 61%; left: 47.5%;">C8</button>
+  <button class="spot" style="top: 61%; left: 77.8%;">C9</button>
+  <button class="spot" style="top: 79%; left: 17.5%;">C10</button>
+  <button class="spot" style="top: 79%; left: 47.5%;">C11</button>
+  <button class="spot" style="top: 79%; left: 77.8%;">C12</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

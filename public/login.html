@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <title>หน้าเข้าสู่ระบบ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style-login.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-box active" id="login-form">
+            <form id="loginForm">
+                <h2>Login</h2>
+                <input type="tel" name ="phone" placeholder="Phone" title="เบอร์โทรศัพท์ต้องขึ้นต้นด้วยเลข 0 และมีทั้งหมด 10 หลัก" required>
+                <input type="password" name ="password" placeholder="Password" title="รหัสผ่านต้องมี 8-12 ตัวอักษร และมีตัวเลขและอักขระพิเศษ (/, _, @, #) อย่างน้อย 1 ตัว" required>
+                <button type ="submit" id="submitBtn">Submit</button>
+                <p>Don't have an account.<a href ='#' onclick="showForm('register-form')">Register</a></p>
+            </form>
+        </div>
+
+        <div class="form-box " id="register-form">
+            <form id="registerForm">
+                <h2>Register</h2>
+                <input type="text" name ="name" placeholder="Name" required>
+                <input type="tel" name ="phone" placeholder="Phone" title="เบอร์โทรศัพท์ต้องขึ้นต้นด้วยเลข 0 และมีทั้งหมด 10 หลัก" required>
+                <input type="password" name ="password" placeholder="Password" title="รหัสผ่านต้องมี 8-12 ตัวอักษร และมีตัวเลขและอักขระพิเศษ (/, _, @, #) อย่างน้อย 1 ตัว" required>
+                <button type ="submit" id="RegisterBtn">Register</button>
+                <p>Already have an account.<a href ='#' onclick="showForm('login-form')">Login</a></p>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="script-login.js"></script>
+</body>
+
+</html>
